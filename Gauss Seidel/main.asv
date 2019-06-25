@@ -11,7 +11,6 @@ while n ~= m
 A = input('Digite a matriz A (use [ a2, a1, (...), an entao use ;(para iniciar uma nova linha) n1 ,n2, (...), nn e ] para finalizar: \n');
 [m,n] = size(A);
 B = input('Digite a matriz B (use [ b1, b2, (...), bn entao use ;(para iniciar uma nova linha) n1 ,n2, (...), nn e ] para finalizar: \n');
-x = input('Digite os valores iniciais x (use [ x1, x2, (...), xn entao use ;(para iniciar uma nova linha) n1 ,n2, (...), nn e ] para finalizar: \n');
 e = input('Digite o erro: \n');
 
    if n~=m
@@ -19,8 +18,7 @@ e = input('Digite o erro: \n');
    end
 
 end
-%[x,Erro] = gaussSeidel(A,B,e);
-%disp(['Vetor das variaveis [' num2str(x) '], com erro de: ' num2str(Erro)]);
-[x,itr] = gaussSeidelrev2(A,B,x,e);
-disp(['Vetor das variaveis [' num2str(x(:).') '], numero de iterações: ' num2str(itr)]);
- 
+
+[x,Erro] = gaussSeidel(A,B,e);
+ disp(['Vetor das variaveis [' num2str(x) '], com erro de: ' num2str(Erro)]);
+ [x,itr] = gauss
